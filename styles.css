@@ -268,7 +268,7 @@ canvas {
 }
 .scrolling {
   position: relative;
-  width: 160vw;
+  width: 100vw;
   height: 16vh;
   overflow: hidden;
   background-image: linear-gradient(
