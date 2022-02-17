@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>AirBuds+</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="icon-container">
+        <div id="menuicon">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+        </div>
+      </div>
+      <div class="mobile-menu">
+        <ul class="menu">
+          <li class="menu-item"><a href="index.html">Home</a></li>
+          <li class="menu-item"><a href="pricing.html">Pricing</a></li>
+          <li class="menu-item"><a href="accessories.html">Accessories</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="intro">
+      <div class="intro-text">
+        <div class="header-text">AirBuds+</div>
+        <div class="subheader-text">Effortless. Simple. Powerful.</div>
+      </div>
+      <div class="intro-content">
+        <div class="content-text">It’s magic, remastered.</div>
+      </div>
+
+      <canvas id="hero-lightpass" />
+    </div>
+    <div class="scrolling">
+      <h2>Introducing, AirBuds+</h2>
+    </div>
+
+    <div class="image-container">
+      <div class="box-one"><img src="airbuds1.png" /></div>
+      <div class="box-two">
+        <div class="boxheader-text">Bass hits an all-time high.</div>
+        <div class="boxsubheader-text">
+          Spatial audio with dynamic head tracking places sounds all around you
+          to create a three-dimensional listening experience for music, TV
+          shows, movies and more — immersing you in sounds from every direction
+          so it feels like you’re in your very own concert hall or theatre.
+        </div>
+      </div>
+    </div>
+    <div class="image-container">
+      <div class="box-three">
+        <div class="secondboxheader-text">Mute the breeze with Bluetooth</div>
+        <div class="secondboxsubheader-text">
+          Covered in a special acoustic mesh, an inset microphone in each earbud
+          minimises wind noise when you’re on a call — so your voice is always
+          heard loud and clear.
+        </div>
+        <div class="secondboxsubheader-text">
+          The all new AirBuds+ gives an instant connection using Bluetooth v15
+          and has a great sense of detection of the devices around it.
+        </div>
+      </div>
+    </div>
+    <div class="image-container">
+      <div class="battery">
+        <div class="batteryheader-text">Battery</div>
+        <div class="batterysubheader-text">
+          Up to 6 hours of listening time with one charge.<br />Upto 30 hours of
+          total listening time with the case.
+        </div>
+      </div>
+    </div>
+    <div class="image-container">
+      <div class="box-four">
+        <video width="640" height="480" autoplay loop>
+          <source src="airbudsvid.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="box-five">
+        <div class="boxheader-text">Audio Sharing</div>
+        <div class="boxsubheader-text">
+          Audio Sharing. Easily share a song or show between any two sets of
+          AirBuds+. Simply bring AirBuds+ near the Phone, Tablet or TV you’re
+          listening to and connect instantly.
+        </div>
+      </div>
+    </div>
+    <div class="content">AirBuds+ Reviews</div>
+    <div class="container">
+      <div class="veiw-box">
+        <div id="testimonials">
+          <div class="user">
+            <img src="images/user1.jpg" alt="" />
+            <p>
+              Many people feel that there is a limited amount of abundance,
+              wealth, or chance to succeed in life. Furthermore, there is a
+              solid beleif that if one person succeeds, another must fail.
+            </p>
+            <h3>Riley Olie</h3>
+          </div>
+
+          <div class="user space">
+            <img src="images/user2.jpg" alt="" />
+            <p>
+              Many people feel that there is a limited amount of abundance,
+              wealth, or chance to succeed in life. Furthermore, there is a
+              solid beleif that if one person succeeds, another must fail.
+            </p>
+            <h3>Steve McCurry</h3>
+          </div>
+
+          <div class="user">
+            <img src="images/user1.jpg" alt="" />
+            <p>
+              Many people feel that there is a limited amount of abundance,
+              wealth, or chance to succeed in life. Furthermore, there is a
+              solid beleif that if one person succeeds, another must fail.
+            </p>
+            <h3>Merlin Nguyen</h3>
+          </div>
+        </div>
+
+        <div class="controls">
+          <span id="control1"></span>
+          <span id="control2" class="active"></span>
+          <span id="control3"></span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var testimonials = document.getElementById("testimonials");
+      var control1 = document.getElementById("control1");
+      var control2 = document.getElementById("control2");
+      var control3 = document.getElementById("control3");
+
+      control1.onclick = function () {
+        testimonials.style.transform = "translateX(870px)";
+        control1.classList.add("active");
+        control2.classList.remove("active");
+        control3.classList.remove("active");
+      };
+
+      control2.onclick = function () {
+        testimonials.style.transform = "translateX(0px)";
+        control1.classList.remove("active");
+        control2.classList.add("active");
+        control3.classList.remove("active");
+      };
+
+      control3.onclick = function () {
+        testimonials.style.transform = "translateX(-870px)";
+        control1.classList.remove("active");
+        control2.classList.remove("active");
+        control3.classList.add("active");
+      };
+    </script>
+
+    <script src="nav.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
